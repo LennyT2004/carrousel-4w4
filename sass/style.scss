@@ -1,35 +1,59 @@
-.carrousel {
-    display: none;
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    border: 2px solid black;
-    background-color: rgba(128, 128, 128, 0.25);
-    top: 25%;
-    left: 25%;
+.carrousel { // boîte modale qui contiendra le carrousel
+    transform : scale(0); // la boîte modale est invisible 
+    transition : transform .25s; // permet d'animer l'ouverture de la boîte modale
+    position: fixed; // la division carrousel est une boîte modale
+    width: 100%;
+    height: 90%;
+    border: 2px solid rgb(9, 69, 166);
+    background-color: rgba(0,255,0,.5);
+    top:0;
+    left:0;
     z-index: 1;
+    @media screen and (min-width : 400px){
+        width: 75%;
+        height: 75%; 
+        top:12.5%;
+        left:12.5%;
+    }
 }
 
-.carrousel-ouvrir {
-    display: block;
+.carrousel__x{
+   position : absolute;
+   right : 10px;
+   top :10px;
+   padding: 5px 8px;
+   border : 1px solid #555;
+   z-index:100;
 }
 
-.carrousel_x {
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 1rem 0.5rem;
-    border: 1px solid blue;
+.carrousel__x:hover{
+    background-color: rgb(225, 84, 18);
 }
 
-.carrousel_figure {
+.carrousel__figure{
+width: 100%;
+height:100%;
+
 
 }
 
-.carrousel_img {
-    
+.carrousel__img{
+  position : absolute;  
+  width : 100%;
+  height: 100%;
+  top:0;
+  left : 0;
+  object-fit: cover;
+  opacity : 1; // rend les images invisible
 }
 
-.bouton_ouvrir {
-    width: 200px;
+.carrousel--ouvrir {
+    transform : scale(1);
+}
+
+
+
+
+.bouton__ouvrir {
+    width : 200px;
 }
