@@ -1,10 +1,10 @@
 <?php
 /**
  * Plugin Name: Carrousel
- * Author: Eddy Martin
+ * Author: Lenny Tran
  * Description: Affiche le carrousel associé à une galerie de Wordpress
  * Version: 1.0.0
- * Plugin URI: https://github.com/eddytuto
+ * Plugin URI: https://github.com/LennyT2004
  * Author URI: https://referenced.ca
  */
 
