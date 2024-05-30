@@ -57,12 +57,8 @@
             let carrousel__imgs = carrousel__figure.children;
             for (const img of carrousel__imgs) {
                 img.style.opacity = 0;
-                img.classList.remove('scale-up');
-                img.classList.add('scale-down');
             }
             carrousel__imgs[index].style.opacity = 1;
-            carrousel__imgs[index].classList.remove('scale-down');
-            carrousel__imgs[index].classList.add('scale-up');
         });
     }
 
