@@ -46,7 +46,7 @@
     top: 0;
     left: 0;
     object-fit: cover;
-    opacity: 1; // rend les images invisible
+    opacity: 0; // rend les images invisible
     transition: opacity 0.3s ease-in-out;
 }
 
