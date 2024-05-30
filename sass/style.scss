@@ -49,6 +49,18 @@
     opacity: 1; // rend les images invisible
 }
 
+.carrousel__img {
+    transition: transform 0.3s ease-in-out;
+}
+
+.carrousel__img.scale-down {
+    transform: scale(0.8);
+}
+
+.carrousel__img.scale-up {
+    transform: scale(1);
+}
+
 .carrousel__form {
     position: absolute;
     top: 50%;
