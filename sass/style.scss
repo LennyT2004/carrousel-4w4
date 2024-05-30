@@ -31,7 +31,6 @@
 }
 
 .carrousel__x:hover {
-    background-color: rgb(225, 84, 18);
 }
 
 .carrousel__figure {
@@ -46,7 +45,7 @@
     top: 0;
     left: 0;
     object-fit: cover;
-    opacity: 1; // rend les images invisible
+    opacity: 0; // rend les images invisible
     transition: opacity 0.3s ease-in-out;
 }
 
