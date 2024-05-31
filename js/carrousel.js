@@ -4,12 +4,8 @@
     let carrousel__x = document.querySelector('.carrousel__x')
     let galerie = document.querySelector('.galerie')
 
-
     let carrousel__figure = document.querySelector('.carrousel__figure')
 
-
-    /* récupère la première image de la galerie */
-    /* pour créer une collection d'images de la galerie */
     let galerie__img = galerie.querySelectorAll('img')
 
     let index = 0
@@ -19,14 +15,10 @@
         index = index + 1
     }
 
-    /**
-     * Créer l'image du carrousel à partir de la galerie
-     * @param {*} index  le numéro de l'image
-     * @param  elm l'élément image de la galerie
-     */
+    // Trigger a click event on the first radio button
+    document.querySelector('.carrousel_radio').click();
+
     function creer_image_carrousel(index, elm) {
-        console.log(elm.src)
-        /* Création dynamique d'une image du carrousel */
         let carrousel__img = document.createElement('img')
         carrousel__img.src = elm.src
         carrousel__img.classList.add('carrousel__img')
@@ -34,24 +26,14 @@
         carrousel__figure.appendChild(carrousel__img)
     }
 
-    /**
-     * Création d'un radio bouton du carrousel
-     * @param {*} index  le numéro du radio
-     */
     function creer_radio_carrousel(index) {
         let carrousel__form = document.querySelector('.carrousel__form')
         let carrousel_radio = document.createElement('input');
-        // class
         carrousel_radio.classList.add('carrousel_radio');
-        // index
         carrousel_radio.dataset.index = index;
-        // type
         carrousel_radio.type = 'radio';
-        // name
         carrousel_radio.name = 'imageRadio';
-        // ajouter dans carrousel__form
         carrousel__form.appendChild(carrousel_radio);
-        // ajouter un écouteur qui permettra de changer l'opacité de l'image « index »
         carrousel_radio.addEventListener('click', function () {
             let index = this.dataset.index;
             let carrousel__imgs = carrousel__figure.children;
@@ -62,13 +44,11 @@
         });
     }
 
-    /* écouteur pour ouvrir la boîte modale */
     bouton.addEventListener('click', function () {
-            carrousel.classList.add('carrousel--ouvrir') // ouvrir le carrousel
-        })
-    /* Écouteur pour fermer la boîte modale */
-    carrousel__x.addEventListener('click', function () {
+        carrousel.classList.add('carrousel--ouvrir')
+    })
 
-            carrousel.classList.remove('carrousel--ouvrir') // fermer le carrousel
-        })
+    carrousel__x.addEventListener('click', function () {
+        carrousel.classList.remove('carrousel--ouvrir')
+    })
 }) ()
