@@ -40,10 +40,10 @@
 
 .carrousel__img {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
+  max-width: 100%;
+  height: auto;
+  top: 12.5%;
+  left: 25%;
   object-fit: cover;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
@@ -68,6 +68,7 @@
 
 .carrousel--ouvrir {
   transform: scale(1);
+  display: flex;
 }
 
 .bouton__ouvrir {

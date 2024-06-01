@@ -26,6 +26,36 @@
         carrousel__figure.appendChild(carrousel__img)
     }
 
+    // Create navigation buttons
+    let prevButton = document.createElement('button');
+    prevButton.innerText = 'Previous';
+    prevButton.classList.add('carrousel__prev');
+
+    let nextButton = document.createElement('button');
+    nextButton.innerText = 'Next';
+    nextButton.classList.add('carrousel__next');
+
+    // Append buttons to the carrousel
+    carrousel.appendChild(prevButton);
+    carrousel.appendChild(nextButton);
+
+    // Add event listeners to the buttons
+    prevButton.addEventListener('click', function () {
+        let currentRadio = document.querySelector('.carrousel_radio:checked');
+        let prevRadio = currentRadio.previousElementSibling;
+        if (prevRadio && prevRadio.classList.contains('carrousel_radio')) {
+            prevRadio.click();
+        }
+    });
+
+    nextButton.addEventListener('click', function () {
+        let currentRadio = document.querySelector('.carrousel_radio:checked');
+        let nextRadio = currentRadio.nextElementSibling;
+        if (nextRadio && nextRadio.classList.contains('carrousel_radio')) {
+            nextRadio.click();
+        }
+    });
+
     function creer_radio_carrousel(index) {
         let carrousel__form = document.querySelector('.carrousel__form')
         let carrousel_radio = document.createElement('input');
